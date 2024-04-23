@@ -29,9 +29,31 @@ namespace ConsoleApp1
             Console.WriteLine();
             return tab;
             //zapełnic tablice w pętli, liczbami podanymi
-
-
-
+        }
+        public void Wyswietl_Tablice(int[] tab)
+        {
+            //wyswietlanie tablicy
+            Console.WriteLine("Elementy tablicy: ");
+            foreach(int i in tab)
+            {
+                Console.Write(i + ", ");
+            }
+            Console.WriteLine();
+        }
+        public void SortujBabelkowo(int[] tab)
+        {
+            for (int i = 0;i < tab.Length;i++)
+            {
+                for (int j = 1; j < tab.Length - i; j++)
+                {
+                    if (tab[j - 1] > tab[j])
+                    {
+                        int temp = tab[j - 1];
+                        tab[j - 1] = tab[j];
+                        tab[j] = temp;
+                    }
+                }
+            }
         }
     }
 }

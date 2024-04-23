@@ -7,5 +7,10 @@ class Program
         Tablice Tablice = new Tablice();
         Tablice.Powitanie();
         int [] tab = Tablice.Stworz_Tablice();
+
+        Console.Clear();
+        Tablice.Wyswietl_Tablice(tab);
+        Tablice.SortujBabelkowo(tab);s
+        Tablice.Wyswietl_Tablice(tab);
     }
 }
